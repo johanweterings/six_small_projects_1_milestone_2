@@ -3,13 +3,13 @@
 
 using binary_node2;
 
-var fNode = new BinaryNode<string>() { Value = "F" };
-var eNode = new BinaryNode<string>() { Value = "E" };
-var dNode = new BinaryNode<string>() { Value = "D" };
-var cNode = new BinaryNode<string>() { Value = "C" };
-var bNode = new BinaryNode<string>() { Value = "B" };
-var aNode = new BinaryNode<string>() { Value = "A" };
-var rootNode = new BinaryNode<string>() { Value = "Root" };
+var fNode = new BinaryNode<string>("F") ;
+var eNode = new BinaryNode<string>("E") ;
+var dNode = new BinaryNode<string>("D") ;
+var cNode = new BinaryNode<string>("C") ;
+var bNode = new BinaryNode<string>("B") ;
+var aNode = new BinaryNode<string>("A") ;
+var rootNode = new BinaryNode<string>("Root");
 
 rootNode.RightChild = bNode;
 bNode.RightChild = eNode;
@@ -20,12 +20,6 @@ aNode.LeftChild = cNode;
 aNode.RightChild = dNode;
 
 Console.WriteLine(rootNode.ToString());
-Console.WriteLine(aNode.ToString());
-Console.WriteLine(bNode.ToString());
-Console.WriteLine(cNode.ToString());
-Console.WriteLine(dNode.ToString());
-Console.WriteLine(eNode.ToString());
-Console.WriteLine(fNode.ToString());
 
 
 

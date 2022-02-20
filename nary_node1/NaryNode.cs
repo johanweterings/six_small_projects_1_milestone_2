@@ -24,9 +24,15 @@ namespace nary_node2
 
         public override string ToString()
         {
-            var stringBuilder = new StringBuilder();
-            Children.ForEach(e => stringBuilder.Append($"{e?.Value.ToString() ?? "null"} "));
-            return $"{Value}: {stringBuilder}";
+            return ToString(string.Empty);
         }
+
+        public string ToString(string spaces)
+        {
+            var result = $"{spaces}{Value}:\n";
+            Children.ForEach(e => result += (e.ToString(spaces + "   ")));
+            return result;
+        }
+
     }
 }

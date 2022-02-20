@@ -36,12 +36,16 @@ namespace binary_node2
 
         public string ToString(string spaces)
         {
-            return $"{spaces}{Value}";
+            var result = $"{spaces}{Value}:\n";
+            if (LeftChild == null && RightChild == null)
+            {
+                return result;
+            }
             
-            
-            var leftString = LeftChild?.Value.ToString() ?? "null";
-            var rightString = RightChild?.Value.ToString() ?? "null";
-            return $"{Value}: {leftString} {rightString}";
+            var indent = spaces + "   ";
+            result += LeftChild?.ToString(indent) ?? $"{indent}none\n";
+            result += RightChild?.ToString(indent) ?? $"{indent}none\n";
+            return result;
         }
     }
 }

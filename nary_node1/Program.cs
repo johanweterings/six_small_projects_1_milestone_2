@@ -1,16 +1,16 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using nary_node2;
 
-var aNaryNode = new NaryNode<string> { Value = "A" };
-var bNaryNode = new NaryNode<string> { Value = "B" };
-var cNaryNode = new NaryNode<string> { Value = "C" };
-var dNaryNode = new NaryNode<string> { Value = "D" };
-var eNaryNode = new NaryNode<string> { Value = "E" };
-var fNaryNode = new NaryNode<string> { Value = "F" };
-var gNaryNode = new NaryNode<string> { Value = "G" };
-var hNaryNode = new NaryNode<string> { Value = "H" };
-var iNaryNode = new NaryNode<string> { Value = "I" };
-var rootNaryNode = new NaryNode<string> { Value = "Root" };
+var aNaryNode = new NaryNode<string>("A");
+var bNaryNode = new NaryNode<string>("B");
+var cNaryNode = new NaryNode<string>("C");
+var dNaryNode = new NaryNode<string>("D");
+var eNaryNode = new NaryNode<string>("E");
+var fNaryNode = new NaryNode<string>("F");
+var gNaryNode = new NaryNode<string>("G");
+var hNaryNode = new NaryNode<string>("H");
+var iNaryNode = new NaryNode<string>("I");
+var rootNaryNode = new NaryNode<string>("Root");
 
 
 rootNaryNode.Children = new List<NaryNode<string>> { aNaryNode, bNaryNode, cNaryNode };
@@ -20,15 +20,6 @@ cNaryNode.Children = new List<NaryNode<string>> { fNaryNode };
 fNaryNode.Children = new List<NaryNode<string>> { hNaryNode, iNaryNode };
 
 Console.WriteLine(rootNaryNode);
-Console.WriteLine(aNaryNode);
-Console.WriteLine(bNaryNode);
-Console.WriteLine(cNaryNode);
-Console.WriteLine(dNaryNode);
-Console.WriteLine(eNaryNode);
-Console.WriteLine(fNaryNode);
-Console.WriteLine(gNaryNode);
-Console.WriteLine(hNaryNode);
-Console.WriteLine(iNaryNode);
 
 
 
